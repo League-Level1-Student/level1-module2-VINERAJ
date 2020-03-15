@@ -4,7 +4,17 @@ package tea_maker;
  *    Level 1
  */
 
+import tea_maker.Kettle.Water;
+
 public class TeaMaker {
+	public static void main(String[] args) {
+		Cup cup = new Cup();
+		TeaBag teabag = new TeaBag("mint");
+		Kettle kettle = new Kettle();
+		Water water = kettle.getWater();
+		kettle.boil();
+		cup.makeTea(teabag, water);
+	}
 
 	/* Figure out how to make a cup of tea in this runner class, using the other classes below */
 
